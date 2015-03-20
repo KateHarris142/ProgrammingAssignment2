@@ -25,7 +25,6 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-
 ## This function will check in the parent directory to see if the matrix inverse has
 ## previously been calculated. If it has it returns that the inverse of the matrix. 
 ## If not previously calculated, the inverse is calculated and then this is stored 
@@ -44,6 +43,6 @@ cacheSolve <- function(x, ...) {
     data <- x$get()                 ## otherwise calculate the inverse of the matrix
     m <- solve(data)                ## and put into setInverse, i.e in the parent
     x$setInverse(m)                 ##environment for the next time the value is required.
-    m                               ## return m
+    m                               ## return m, the inverse of the inital matrix
     
 }
